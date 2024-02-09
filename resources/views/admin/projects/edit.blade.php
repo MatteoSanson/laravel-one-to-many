@@ -29,14 +29,15 @@
                 @enderror
             </div>
             <div class="mb-3">
-                <label class="form-label">Type</label>
-                <input type="text" class="form-control @error('type') is-invalid @enderror" name="type"
-                    value="{{ old('type', $project->type) }}">
-                @error('type')
+                <label class="form-label">Language/Framework</label>
+                <input type="text" class="form-control @error('language_framework') is-invalid @enderror"
+                    name="language_framework" value="{{ old('language_framework', $project->language_framework) }}">
+                @error('language_framework')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
             </div>
             <div class="mb-3">
+                <label class="form-label">Visibility</label>
                 <select class="form-select" aria-label="Default select example" name="visibility">
                     <option value="public" {{ $project->visibility == 'public' ? 'selected' : '' }}>public</option>
                     <option value="private" {{ $project->visibility == 'private' ? 'selected' : '' }}>private</option>

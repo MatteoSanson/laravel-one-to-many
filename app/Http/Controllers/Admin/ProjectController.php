@@ -36,7 +36,7 @@ class ProjectController extends Controller
         $data = $request->validated();
         $project = new Project();
         $project->title = $data['title'];
-        $project->type = $data['type'];
+        $project->language_framework = $data['language_framework'];
         $project->visibility = $data['visibility'];
         // Genera lo slug e verifica se esiste già
         $slug = Str::slug($data['title']);
@@ -77,7 +77,7 @@ class ProjectController extends Controller
     
         // Aggiorna il titolo e altri campi
         $project->title = $data['title'];
-        $project->type = $data['type'];
+        $project->language_framework = $data['language_framework'];
         $project->visibility = $data['visibility'];
 
         // Genera lo slug e verifica se esiste già

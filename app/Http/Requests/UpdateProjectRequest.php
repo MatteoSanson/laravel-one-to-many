@@ -38,7 +38,7 @@ class UpdateProjectRequest extends FormRequest
 
     return [
         'title' => $titleRules,
-        'type' => 'nullable|min:2|max:50',
+        'language_framework' => 'nullable|min:2|max:50',
         'visibility' => 'nullable|max:7',
         'slug' => 'unique:projects,slug',
     ];

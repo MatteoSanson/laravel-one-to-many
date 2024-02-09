@@ -20,10 +20,10 @@
     </div>
     <div class="card">
         <div class="card-header">
-            <p>{{ $project->visibility }} project</p>
+            <p><strong>Visibility:</strong> {{ $project->visibility }} project</p>
         </div>
         <div class="card-body">
-            <p class="card-text">{{ $project->type }}</p>
+            <p class="card-text"><strong>Language/Framework:</strong> {{ $project->language_framework }}</p>
             <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-primary btn-sm">Edit</a>
         </div>
     </div>

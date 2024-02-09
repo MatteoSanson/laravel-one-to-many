@@ -19,7 +19,7 @@ class ProjectSeeder extends Seeder
         for ($i = 0; $i < 25; $i++){
             $project = new Project();
             $project->title = $faker->sentence(3);
-            $project->type = $faker->randomElement(['html', 'javascript', 'php', 'laravel', 'css', 'vue', 'vuejs', 'c++', 'vite', 'react']);
+            $project->language_framework = $faker->randomElement(['html', 'javascript', 'php', 'laravel', 'css', 'vue', 'vuejs', 'c++', 'vite', 'react']);
             $project->visibility = $faker->randomElement(['public', 'private']);
             $project->slug = Str::of($project->title)->slug('-');
 
