@@ -36,10 +36,13 @@ class ProjectController extends Controller
     public function store(StoreProjectRequest $request)
     {
         $data = $request->validated();
+        // dd($data);
         $project = new Project();
         $project->title = $data['title'];
+        $project->type_id = $data['type_id'];
         $project->language_framework = $data['language_framework'];
         $project->visibility = $data['visibility'];
+
         // Genera lo slug e verifica se esiste già
         $slug = Str::slug($data['title']);
         $count = Project::where('slug', $slug)->count();
@@ -79,6 +82,7 @@ class ProjectController extends Controller
     
         // Aggiorna il titolo e altri campi
         $project->title = $data['title'];
+        $project->type_id = $data['type_id'];
         $project->language_framework = $data['language_framework'];
         $project->visibility = $data['visibility'];
 
