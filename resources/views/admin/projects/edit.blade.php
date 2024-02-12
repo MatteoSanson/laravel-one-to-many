@@ -29,6 +29,16 @@
                 @enderror
             </div>
             <div class="mb-3">
+                <label class="form-label">Type</label>
+                <select class="form-select" aria-label="Default select example" name="type_id">
+                    <option selected>Choose an option</option>
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}" @if (old('type_id', $project->type_id) == $type->id) selected @endif>
+                            {{ $type->title }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="mb-3">
                 <label class="form-label">Language/Framework</label>
                 <input type="text" class="form-control @error('language_framework') is-invalid @enderror"
                     name="language_framework" value="{{ old('language_framework', $project->language_framework) }}">
@@ -39,8 +49,8 @@
             <div class="mb-3">
                 <label class="form-label">Visibility</label>
                 <select class="form-select" aria-label="Default select example" name="visibility">
-                    <option value="public" {{ $project->visibility == 'public' ? 'selected' : '' }}>public</option>
-                    <option value="private" {{ $project->visibility == 'private' ? 'selected' : '' }}>private</option>
+                    <option value="public" {{ old('visibility') == 'public' ? 'selected' : '' }}>public</option>
+                    <option value="private" {{ old('visibility') == 'private' ? 'selected' : '' }}>private</option>
                 </select>
             </div>
     </div>
