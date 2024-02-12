@@ -20,6 +20,7 @@
             <tr>
                 <th scope="col">#id</th>
                 <th scope="col">Title</th>
+                <th scope="col">Type</th>
                 <th scope="col">Language/Framework</th>
                 <th scope="col">Visibility</th>
                 <th scope="col">Option</th>
@@ -30,6 +31,7 @@
                 <tr>
                     <th scope="row">{{ $project->id }}</th>
                     <td>{{ $project->title }}</td>
+                    <td>{{ $project->type->title }}</td>
                     <td>{{ $project->language_framework }}</td>
                     <td>{{ $project->visibility }}</td>
                     <td>
