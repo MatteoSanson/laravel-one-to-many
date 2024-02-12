@@ -28,6 +28,15 @@
                 @enderror
             </div>
             <div class="mb-3">
+                <label class="form-label">Type</label>
+                <select class="form-select" aria-label="Default select example" name="type_id">
+                    <option selected>Choose an option</option>
+                    @foreach ($types as $type)
+                        <option value="{{ $type->id }}">{{ $type->title }}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="mb-3">
                 <label class="form-label">Language/Framework</label>
                 <input type="text" class="form-control @error('language_framework') is-invalid @enderror"
                     name="language_framework" value="{{ old('language_framework') }}">
