@@ -40,7 +40,7 @@ class ProjectController extends Controller
         $project = new Project();
         $project->title = $data['title'];
         $project->type_id = $data['type_id'];
-        $project->language_framework = $data['language_framework'];
+        // $project->language_framework = $data['language_framework'];
         $project->visibility = $data['visibility'];
 
         // Genera lo slug e verifica se esiste già
@@ -85,7 +85,7 @@ class ProjectController extends Controller
         // Aggiorna il titolo e altri campi
         $project->title = $data['title'];
         $project->type_id = $data['type_id'];
-        $project->language_framework = $data['language_framework'];
+        // $project->language_framework = $data['language_framework'];
         $project->visibility = $data['visibility'];
 
         // Genera lo slug e verifica se esiste già

@@ -38,14 +38,14 @@
                     @endforeach
                 </select>
             </div>
-            <div class="mb-3">
+            {{-- <div class="mb-3">
                 <label class="form-label">Language/Framework</label>
                 <input type="text" class="form-control @error('language_framework') is-invalid @enderror"
                     name="language_framework" value="{{ old('language_framework', $project->language_framework) }}">
                 @error('language_framework')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
-            </div>
+            </div> --}}
             <div class="mb-3">
                 <label class="form-label">Visibility</label>
                 <select class="form-select" aria-label="Default select example" name="visibility">
