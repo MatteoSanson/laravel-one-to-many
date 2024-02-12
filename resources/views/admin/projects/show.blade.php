@@ -23,6 +23,7 @@
             <p><strong>Visibility:</strong> {{ $project->visibility }} project</p>
         </div>
         <div class="card-body">
+            <p class="card-text"><strong>Type:</strong> {{ $project->type->title }}</p>
             <p class="card-text"><strong>Language/Framework:</strong> {{ $project->language_framework }}</p>
             <a href="{{ route('admin.projects.edit', $project) }}" class="btn btn-primary btn-sm">Edit</a>
         </div>
